@@ -29,6 +29,10 @@ def is_valid_form(values):
   return valid
 
 
+def rootview(request):
+  return redirect('home')
+
+
 @method_decorator(login_required, name='dispatch')
 class CheckoutView(View):
   def get(self, *args, **kwargs):
