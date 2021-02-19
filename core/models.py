@@ -42,7 +42,7 @@ class Item(models.Model):
   label = models.CharField(choices=LABEL_CHOICES, max_length=2)
   slug = models.SlugField()
   description = models.TextField()
-  image = models.CharField(max_length=200)
+  image = models.CharField(max_length=1000)
 
   objects = ItemQuerySet.as_manager()
 
